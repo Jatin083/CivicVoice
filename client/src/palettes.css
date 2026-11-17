@@ -1,0 +1,185 @@
+/*
+  Colour palettes. Each one re-defines the tokens from index.css on <html data-palette="...">,
+  keeping the same 60/30/10 split:
+    page  the 60%  (--page, --card, --ink)
+    deep  the 30%  (--deep: hero, nav, panels)
+    hot   the 10%  (--saffron: the Sign button and highlights)
+  --teal is the primary action colour, --plum the admin accent.
+  "civic" is the default and lives in index.css :root.
+  Status colours (danger, success, amber) stay the same in every palette.
+*/
+
+/* Indigo night: deep indigo, electric violet, coral heat */
+[data-palette='indigo'] {
+  --page: #f6f6fb;
+  --surface: #ecebf6;
+  --ink: #16142e;
+  --muted: #5d5b78;
+  --line: rgba(22, 20, 46, 0.12);
+  --line-strong: rgba(22, 20, 46, 0.22);
+  --deep: #17153b;
+  --deep-2: #0f0d2b;
+  --deep-ink: #f1f0ff;
+  --deep-muted: #aeaad6;
+  --deep-line: rgba(241, 240, 255, 0.14);
+  --teal: #4f46e5;
+  --teal-hover: #4338ca;
+  --teal-2: #7c74ff;
+  --teal-soft: rgba(79, 70, 229, 0.1);
+  --saffron: #ff7a59;
+  --saffron-hover: #ff8f73;
+  --saffron-ink: #2d0b02;
+  --plum: #c026d3;
+  --plum-soft: rgba(192, 38, 211, 0.1);
+  --mint: #ecebff;
+  --accent-deep: #a5b4fc;
+  --hot-text: #d4512f;
+  --hot-soft: rgba(255, 122, 89, 0.14);
+  --grad: linear-gradient(100deg, #ff7a59 0%, #ff9a7a 45%, #f45d8a 100%);
+  --mesh-1: rgba(79, 70, 229, 0.75);
+  --mesh-2: rgba(192, 38, 211, 0.5);
+  --mesh-3: rgba(255, 122, 89, 0.35);
+  --hero-mid: #5c5a8c;
+  --nav-bg: rgba(23, 21, 59, 0.82);
+  --deep-glass: rgba(23, 21, 59, 0.94);
+}
+
+/* Forest: deep green, leaf green, acid lime */
+[data-palette='forest'] {
+  --page: #f3f5ef;
+  --surface: #e7ebe1;
+  --ink: #142019;
+  --muted: #56645a;
+  --line: rgba(20, 32, 25, 0.12);
+  --line-strong: rgba(20, 32, 25, 0.22);
+  --deep: #12291d;
+  --deep-2: #0b1d14;
+  --deep-ink: #eef5ea;
+  --deep-muted: #a6bba8;
+  --deep-line: rgba(238, 245, 234, 0.14);
+  --teal: #1f7a4d;
+  --teal-hover: #186640;
+  --teal-2: #3aa36b;
+  --teal-soft: rgba(31, 122, 77, 0.1);
+  --saffron: #c5f03c;
+  --saffron-hover: #d2f566;
+  --saffron-ink: #1a2400;
+  --plum: #3b6e8f;
+  --plum-soft: rgba(59, 110, 143, 0.1);
+  --mint: #e6f0e1;
+  --accent-deep: #c5f03c;
+  --hot-text: #5a7a00;
+  --hot-soft: rgba(197, 240, 60, 0.2);
+  --grad: linear-gradient(100deg, #c5f03c 0%, #e0f77a 45%, #9ee64a 100%);
+  --mesh-1: rgba(31, 122, 77, 0.75);
+  --mesh-2: rgba(59, 110, 143, 0.5);
+  --mesh-3: rgba(197, 240, 60, 0.3);
+  --hero-mid: #4f6b58;
+  --nav-bg: rgba(18, 41, 29, 0.84);
+  --deep-glass: rgba(18, 41, 29, 0.94);
+}
+
+/* Klein: International Klein blue with marigold (LeashPay's palette) */
+[data-palette='klein'] {
+  --page: #ffffff;
+  --surface: #eef0f8;
+  --ink: #0b0d1f;
+  --muted: #5b5f7a;
+  --line: rgba(11, 13, 31, 0.1);
+  --line-strong: rgba(11, 13, 31, 0.2);
+  --deep: #1b2bf5;
+  --deep-2: #1220c4;
+  --deep-ink: #ffffff;
+  --deep-muted: #c3c9ff;
+  --deep-line: rgba(255, 255, 255, 0.2);
+  --teal: #1b2bf5;
+  --teal-hover: #1220c4;
+  --teal-2: #5865ff;
+  --teal-soft: rgba(27, 43, 245, 0.08);
+  --saffron: #ffc53d;
+  --saffron-hover: #ffd166;
+  --saffron-ink: #241a00;
+  --plum: #e5484d;
+  --plum-soft: rgba(229, 72, 77, 0.1);
+  --mint: #eef0ff;
+  --accent-deep: #ffc53d;
+  --hot-text: #9a6b00;
+  --hot-soft: rgba(255, 197, 61, 0.18);
+  --grad: linear-gradient(100deg, #ffc53d 0%, #ffd97a 45%, #ffab2e 100%);
+  --mesh-1: rgba(120, 140, 255, 0.6);
+  --mesh-2: rgba(10, 15, 120, 0.6);
+  --mesh-3: rgba(255, 197, 61, 0.35);
+  --hero-mid: #8a93f5;
+  --nav-bg: rgba(27, 43, 245, 0.86);
+  --deep-glass: rgba(27, 43, 245, 0.95);
+}
+
+/* Terracotta: warm clay, sand and mustard */
+[data-palette='terracotta'] {
+  --page: #f7f3ee;
+  --surface: #efe8df;
+  --ink: #2a1a14;
+  --muted: #6e5d55;
+  --line: rgba(42, 26, 20, 0.12);
+  --line-strong: rgba(42, 26, 20, 0.22);
+  --deep: #3b1f16;
+  --deep-2: #2a150e;
+  --deep-ink: #fbf1e9;
+  --deep-muted: #d1b7a8;
+  --deep-line: rgba(251, 241, 233, 0.14);
+  --teal: #b85042;
+  --teal-hover: #9e4337;
+  --teal-2: #d46c5c;
+  --teal-soft: rgba(184, 80, 66, 0.1);
+  --saffron: #f2c14e;
+  --saffron-hover: #f5cf72;
+  --saffron-ink: #2b1d00;
+  --plum: #6b4f7a;
+  --plum-soft: rgba(107, 79, 122, 0.1);
+  --mint: #f3e7dc;
+  --accent-deep: #f2c14e;
+  --hot-text: #94690a;
+  --hot-soft: rgba(242, 193, 78, 0.18);
+  --grad: linear-gradient(100deg, #f2c14e 0%, #f6d37f 45%, #e8a33a 100%);
+  --mesh-1: rgba(184, 80, 66, 0.7);
+  --mesh-2: rgba(107, 79, 122, 0.5);
+  --mesh-3: rgba(242, 193, 78, 0.32);
+  --hero-mid: #8a6658;
+  --nav-bg: rgba(59, 31, 22, 0.84);
+  --deep-glass: rgba(59, 31, 22, 0.94);
+}
+
+/* Noir: near-black, white space and one signal orange */
+[data-palette='noir'] {
+  --page: #f5f5f4;
+  --surface: #ebebea;
+  --ink: #0c0c0c;
+  --muted: #5f5f5c;
+  --line: rgba(12, 12, 12, 0.1);
+  --line-strong: rgba(12, 12, 12, 0.2);
+  --deep: #0c0c0c;
+  --deep-2: #050505;
+  --deep-ink: #f5f5f4;
+  --deep-muted: #a3a3a0;
+  --deep-line: rgba(245, 245, 244, 0.14);
+  --teal: #0c0c0c;
+  --teal-hover: #2a2a2a;
+  --teal-2: #4a4a4a;
+  --teal-soft: rgba(12, 12, 12, 0.07);
+  --saffron: #ff5a1f;
+  --saffron-hover: #ff7442;
+  --saffron-ink: #ffffff;
+  --plum: #ff5a1f;
+  --plum-soft: rgba(255, 90, 31, 0.1);
+  --mint: #ebebea;
+  --accent-deep: #ff5a1f;
+  --hot-text: #d6400a;
+  --hot-soft: rgba(255, 90, 31, 0.12);
+  --grad: linear-gradient(100deg, #ff5a1f 0%, #ff7a45 45%, #ff3d2e 100%);
+  --mesh-1: rgba(255, 255, 255, 0.1);
+  --mesh-2: rgba(255, 90, 31, 0.28);
+  --mesh-3: rgba(255, 255, 255, 0.06);
+  --hero-mid: #5c5c5a;
+  --nav-bg: rgba(12, 12, 12, 0.84);
+  --deep-glass: rgba(12, 12, 12, 0.95);
+}

@@ -1,0 +1,47 @@
+# Render Blueprint: creates the API (web service) and the React app (static site).
+# Render → New → Blueprint → pick this repo. Fill the "sync: false" values when Render asks.
+# MySQL is not hosted on Render: use Aiven, TiDB Cloud or Railway and paste its details below.
+services:
+  - type: web
+    name: civicvoice-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm ci
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 1d
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_USER
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: DB_NAME
+        sync: false
+      - key: DB_SSL
+        value: "true"
+      - key: CLIENT_URL
+        sync: false # the static site's URL, e.g. https://civicvoice-web.onrender.com
+
+  - type: web
+    name: civicvoice-web
+    runtime: static
+    rootDir: client
+    buildCommand: npm ci && npm run build
+    staticPublishPath: dist
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    envVars:
+      - key: VITE_API_URL
+        sync: false # the API's URL + /api, e.g. https://civicvoice-api.onrender.com/api
